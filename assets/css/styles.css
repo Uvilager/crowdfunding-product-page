@@ -167,6 +167,11 @@ body main .title .buttons .fund {
   border-radius: 30px;
   outline: none;
   border: none;
+  cursor: pointer;
+}
+
+body main .title .buttons .fund:hover {
+  background-color: #147a73;
 }
 
 body main .title .buttons .bookmark {
@@ -176,6 +181,13 @@ body main .title .buttons .bookmark {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+body main .title .buttons .bookmark:hover svg circle {
+  fill: #707070;
 }
 
 @media (min-width: 768px) {
@@ -386,6 +398,7 @@ body main .holder .card {
 
 body main .holder .card:last-child {
   margin-bottom: 16px;
+  opacity: 50%;
 }
 
 @media (min-width: 768px) {
@@ -513,5 +526,14 @@ body main .holder .card .footer button {
   border: none;
   outline: none;
   border-radius: 30px;
+  cursor: pointer;
+}
+
+body main .holder .card .footer .out {
+  background-color: #979797;
+}
+
+body main .holder .card .footer .in-stock:hover {
+  background-color: #147a73;
 }
 /*# sourceMappingURL=styles.css.map */

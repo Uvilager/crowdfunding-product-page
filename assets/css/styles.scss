@@ -108,10 +108,24 @@ body {
                     border-radius: 30px;
                     outline: none;
                     border: none;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #147a73;
+                    }
                 }
                 .bookmark {
                     display: flex;
                     align-items: center;
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    &:hover {
+                        svg {
+                            circle {
+                                fill: #707070;
+                            }
+                        }
+                    }
                     @media (min-width: 768px) {
                         display: flex;
                         background-color: #f4f4f4;
@@ -260,6 +274,7 @@ body {
                 border-radius: 8px;
                 &:last-child {
                     margin-bottom: 16px;
+                    opacity: 50%;
                 }
                 @media (min-width: 768px) {
                     width: 634px;
@@ -345,6 +360,15 @@ body {
                         border: none;
                         outline: none;
                         border-radius: 30px;
+                        cursor: pointer;
+                    }
+                    .out {
+                        background-color: #979797;
+                    }
+                    .in-stock {
+                        &:hover {
+                            background-color: #147a73;
+                        }
                     }
                 }
             }
