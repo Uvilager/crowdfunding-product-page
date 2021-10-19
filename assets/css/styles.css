@@ -6,6 +6,7 @@
 }
 
 body {
+  position: relative;
   font-family: 'Commissioner', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,9 +532,245 @@ body main .holder .card .footer button {
 
 body main .holder .card .footer .out {
   background-color: #979797;
+  cursor: initial;
 }
 
 body main .holder .card .footer .in-stock:hover {
   background-color: #147a73;
+}
+
+body .modals {
+  display: none;
+  padding: 24px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4988);
+}
+
+body .modals .modals-holder {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 97px;
+  background-color: white;
+  max-width: 730px;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder {
+    padding: 48px;
+  }
+}
+
+body .modals .modals-holder h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder h2 {
+    font-size: 20px;
+  }
+}
+
+body .modals .modals-holder p {
+  text-align: left;
+  font-weight: 400;
+  color: #7a7a7a;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+body .modals .modals-holder .modal {
+  background-color: white;
+  padding: 24px;
+  max-width: 634px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+body .modals .modals-holder .modal:last-child {
+  margin-bottom: 16px;
+  opacity: 50%;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal {
+    width: 634px;
+    padding: 32px;
+  }
+  body .modals .modals-holder .modal:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+body .modals .modals-holder .modal .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .modals .modals-holder .modal .header .circle {
+  cursor: pointer;
+  margin-top: 12px;
+  height: 24px;
+  width: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+}
+
+body .modals .modals-holder .modal .header .circle:hover {
+  border: 1px solid #3cb3ab;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal .header .circle {
+    margin-top: 1px;
+  }
+}
+
+body .modals .modals-holder .modal .header .text {
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal .header .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 24px;
+  }
+}
+
+body .modals .modals-holder .modal .header .text h3 {
+  text-align: left;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal .header .text h3 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+
+body .modals .modals-holder .modal .header .text .name {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+body .modals .modals-holder .modal .header .text .name:hover {
+  color: #3cb3ab;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal .header .text .name {
+    margin: 0;
+  }
+}
+
+body .modals .modals-holder .modal .header .text .pledge {
+  color: #3cb3ab;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal .header .text .pledge {
+    margin-left: 17px;
+  }
+}
+
+body .modals .modals-holder .modal p {
+  color: #7a7a7a;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body .modals .modals-holder .modal .footer .amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  body .modals .modals-holder .modal .footer .amount {
+    margin: 0;
+  }
+}
+
+body .modals .modals-holder .modal .footer .amount span {
+  font-size: 15px;
+  color: #7a7a7a;
+  margin-left: 8px;
+  font-weight: normal;
 }
 /*# sourceMappingURL=styles.css.map */
