@@ -20,19 +20,45 @@
     </head>
     <body>
         <header>
-            <div class="menu">
-                <img
-                    class="hero"
-                    src="/assets/images/logo.svg"
-                    alt="crowdfund"
-                />
-                <img
-                    src="/assets/images/icon-hamburger.svg"
-                    alt="hamburger menu"
-                />
-                <!-- About
-      Discover
-      Get Started -->
+            <div class="mobile-menu">
+                <div class="menu">
+                    <img
+                        class="hero"
+                        src="/assets/images/logo.svg"
+                        alt="crowdfund"
+                    />
+                    <img
+                        width="15px"
+                        height="15px"
+                        class="hamburger-menu"
+                        src="/assets/images/icon-hamburger.svg"
+                        alt="hamburger menu"
+                    />
+                    <div class="desktop-menu">
+                        <a href="#about">About</a>
+                        <a href="#discover">Discover</a>
+                        <a href="#getStarted" onclick="toggleModals()"
+                            >Get Started</a
+                        >
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#about" onclick="closeMenu()">About</a>
+                        </li>
+                        <li>
+                            <a href="#discover" onclick="closeMenu()"
+                                >Discover</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#getStarted" onclick="toggleModals()">
+                                Get Started
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main>
@@ -88,7 +114,7 @@
                     <div class="progress"></div>
                 </div>
             </div>
-            <div class="holder">
+            <div class="holder" id="about">
                 <h2>About this project</h2>
                 <p>
                     The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
@@ -104,7 +130,7 @@
                     notepads, pens, and USB sticks to be stored under the stand.
                 </p>
                 <div class="card">
-                    <div class="header">
+                    <div class="header" id="discover">
                         <h3 class="name">Bamboo Stand</h3>
                         <h3 class="pledge">Stand Pledge $25 or more</h3>
                     </div>
@@ -115,7 +141,12 @@
                     </p>
                     <div class="footer">
                         <p class="amount">101 <span>left</span></p>
-                        <button class="in-stock">Select Reward</button>
+                        <button
+                            class="in-stock"
+                            onclick="window.location.href='/#1'"
+                        >
+                            Select Reward
+                        </button>
                     </div>
                 </div>
                 <div class="card">
@@ -130,7 +161,12 @@
                     </p>
                     <div class="footer">
                         <p class="amount">64 <span>left</span></p>
-                        <button class="in-stock">Select Reward</button>
+                        <button
+                            class="in-stock"
+                            onclick="window.location.href='/#2'"
+                        >
+                            Select Reward
+                        </button>
                     </div>
                 </div>
                 <div class="card">
@@ -151,18 +187,46 @@
             </div>
         </main>
         <div class="modals">
-            <div class="modals-holder">
+            <div class="thank-you" id="finish">
+                <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <circle fill="#3CB3AB" cx="32" cy="32" r="32" />
+                        <path
+                            stroke="#FFF"
+                            stroke-width="5"
+                            d="M20 31.86L28.093 40 44 24"
+                        />
+                    </g>
+                </svg>
+                <h2>Thanks for your support!</h2>
+                <p>
+                    Your pledge brings us one step closer to sharing Mastercraft
+                    Bamboo Monitor Riser worldwide. You will get an email once
+                    our campaign is completed.
+                </p>
+                <button class="thanks">Got it!</button>
+            </div>
+            <div class="modals-holder" id="getStarted">
                 <h2>Back this project</h2>
                 <p>
                     Want to support us in bringing Mastercraft Bamboo Monitor
                     Riser out in the world?
                 </p>
-
                 <div class="modal">
                     <div class="header">
-                        <div class="circle"></div>
+                        <div class="container">
+                            <input
+                                type="radio"
+                                name="radio"
+                                class="toggleForm"
+                            />
+                            <div class="gray-circle"></div>
+                            <div class="green-circle"></div>
+                        </div>
                         <div class="text">
-                            <h3 class="name">Pledge with no reward</h3>
+                            <h3 class="name toggle-form">
+                                Pledge with no reward
+                            </h3>
                         </div>
                     </div>
                     <p>
@@ -170,12 +234,41 @@
                         believe in our project. As a backer, you will be signed
                         up to receive product updates via email.
                     </p>
+                    <div class="form">
+                        <div class="wrapper">
+                            <p>Enter your pledge</p>
+                            <div>
+                                <div class="input-div">
+                                    <small>$</small>
+                                    <input
+                                        type="text"
+                                        value="75"
+                                        class="inputPledge"
+                                    />
+                                </div>
+                                <button
+                                    class="enter"
+                                    onclick="window.location.href='/#'"
+                                >
+                                    Continue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal">
+                <div class="modal" id="1">
                     <div class="header">
-                        <div class="circle"></div>
+                        <div class="container">
+                            <input
+                                type="radio"
+                                name="radio"
+                                class="toggleForm"
+                            />
+                            <div class="gray-circle"></div>
+                            <div class="green-circle"></div>
+                        </div>
                         <div class="text">
-                            <h3 class="name">Bamboo Stand</h3>
+                            <h3 class="name toggle-form">Bamboo Stand</h3>
                             <h3 class="pledge">Stand Pledge $25 or more</h3>
                         </div>
                     </div>
@@ -187,12 +280,43 @@
                     <div class="footer">
                         <p class="amount">101 <span>left</span></p>
                     </div>
+                    <div class="form">
+                        <div class="wrapper">
+                            <p>Enter your pledge</p>
+                            <div>
+                                <div class="input-div">
+                                    <small>$</small>
+                                    <input
+                                        type="text"
+                                        value="75"
+                                        class="inputPledge"
+                                    />
+                                </div>
+                                <button
+                                    class="enter"
+                                    onclick="window.location.href='/#'"
+                                >
+                                    Continue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal">
+                <div class="modal" id="2">
                     <div class="header">
-                        <div class="circle"></div>
+                        <div class="container">
+                            <input
+                                type="radio"
+                                name="radio"
+                                class="toggleForm"
+                            />
+                            <div class="gray-circle"></div>
+                            <div class="green-circle"></div>
+                        </div>
                         <div class="text">
-                            <h3 class="name">Black Edition Stand</h3>
+                            <h3 class="name toggle-form">
+                                Black Edition Stand
+                            </h3>
                             <h3 class="pledge">Pledge $75 or more</h3>
                         </div>
                     </div>
@@ -204,10 +328,38 @@
                     <div class="footer">
                         <p class="amount">64 <span>left</span></p>
                     </div>
+                    <div class="form">
+                        <div class="wrapper">
+                            <p>Enter your pledge</p>
+                            <div>
+                                <div class="input-div">
+                                    <small>$</small>
+                                    <input
+                                        type="text"
+                                        value="75"
+                                        class="inputPledge"
+                                    />
+                                </div>
+                                <button
+                                    class="enter"
+                                    onclick="window.location.href='/#'"
+                                >
+                                    Continue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal">
                     <div class="header">
-                        <div class="circle"></div>
+                        <label class="container">
+                            <input
+                                type="radio"
+                                name="radio"
+                                class="toggleForm"
+                            />
+                            <span class="checkmark"></span>
+                        </label>
                         <div class="text">
                             <h3 class="name">Mahogany Special Edition</h3>
                             <h3 class="pledge">Pledge $200 or more</h3>
@@ -224,44 +376,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Selection modal start 
-            
-        Choose to support us without a reward if you simply believe in our
-        project. As a backer, you will be signed up to receive product updates
-        via email. Bamboo Stand Pledge $25 or more You get an ergonomic stand
-        made of natural bamboo. You've helped us launch our promotional
-        campaign, and you’ll be added to a special Backer member list. 101 left -->
-
-        <!-- Selected pledge start -->
-        <!-- Enter your pledge $25 Continue -->
-        <!-- Selected pledge end -->
-
-        <!-- Black Edition Stand Pledge $75 or more You get a Black Special Edition
-        computer stand and a personal thank you. You’ll be added to our Backer
-        member list. Shipping is included. 64 left -->
-
-        <!-- Selected pledge start -->
-        <!-- Enter your pledge $75 Continue -->
-        <!-- Selected pledge end -->
-
-        <!-- Mahogany Special Edition Pledge $200 or more You get two Special Edition
-        Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be
-        added to our Backer member list. Shipping is included. 0 left -->
-
-        <!-- Selected pledge  start -->
-        <!-- Enter your pledge $200 Continue -->
-        <!-- Selected pledge end -->
-
-        <!-- Selection modal end -->
-
-        <!-- Success modal start -->
-
-        <!-- Thanks for your support! Your pledge brings us one step closer to
-        sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
-        email once our campaign is completed. Got it! -->
-
-        <!-- Success modal end -->
     </body>
 </html>
 <script src="app.js"></script>
