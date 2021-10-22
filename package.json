@@ -1,0 +1,24 @@
+{
+    "name": "crowdfunding-product-page",
+    "version": "1.0.0",
+    "description": "**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write \"assets/css/*.scss\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Uvilager/crowdfunding-product-page.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Uvilager/crowdfunding-product-page/issues"
+    },
+    "homepage": "https://github.com/Uvilager/crowdfunding-product-page#readme",
+    "dependencies": {
+        "prettier": "^2.4.1"
+    }
+}
